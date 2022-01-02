@@ -1,0 +1,767 @@
+[2021-12-31 21:42:49,286] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:42:49,302] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:42:49,302] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:42:49,302] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 21:42:49,302] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:42:49,323] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 21:42:49,337] {standard_task_runner.py:52} INFO - Started process 8828 to run task
+[2021-12-31 21:42:49,341] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpj_9vb08y', '--error-file', '/tmp/tmphm3zxhdf']
+[2021-12-31 21:42:49,343] {standard_task_runner.py:77} INFO - Job 40: Subtask tweet_pipeline
+[2021-12-31 21:42:49,416] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 21:42:49,482] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 21:42:49,483] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,483] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,484] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,485] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:42:49,485] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 21:42:49,485] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 21:42:49,500] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T214249, end_date=20211231T214249
+[2021-12-31 21:42:49,554] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 21:42:49,604] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 21:52:14,549] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:52:14,565] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:52:14,566] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:52:14,566] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 21:52:14,566] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:52:14,592] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 21:52:14,615] {standard_task_runner.py:52} INFO - Started process 9289 to run task
+[2021-12-31 21:52:14,624] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpojmk18vh', '--error-file', '/tmp/tmpbfih0nkp']
+[2021-12-31 21:52:14,625] {standard_task_runner.py:77} INFO - Job 56: Subtask tweet_pipeline
+[2021-12-31 21:52:14,710] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 21:52:14,811] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 21:52:14,813] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,813] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,813] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,814] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,815] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,815] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,815] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:14,815] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 21:52:14,815] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 21:52:14,835] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T215214, end_date=20211231T215214
+[2021-12-31 21:52:14,883] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 21:52:14,947] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 21:52:45,800] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:52:45,821] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:52:45,822] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:52:45,822] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 21:52:45,822] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:52:45,843] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 21:52:45,850] {standard_task_runner.py:52} INFO - Started process 9349 to run task
+[2021-12-31 21:52:45,856] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmph_sbeklj', '--error-file', '/tmp/tmplh104szt']
+[2021-12-31 21:52:45,857] {standard_task_runner.py:77} INFO - Job 68: Subtask tweet_pipeline
+[2021-12-31 21:52:45,926] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 21:52:46,015] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 21:52:46,017] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,017] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,017] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:52:46,018] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 21:52:46,018] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 21:52:46,099] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T215245, end_date=20211231T215246
+[2021-12-31 21:52:46,147] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 21:52:46,210] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 21:54:16,878] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:54:16,891] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:54:16,892] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:54:16,892] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 21:54:16,892] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:54:16,910] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 21:54:16,915] {standard_task_runner.py:52} INFO - Started process 9449 to run task
+[2021-12-31 21:54:16,919] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmprt_qwj1b', '--error-file', '/tmp/tmph31le9lp']
+[2021-12-31 21:54:16,920] {standard_task_runner.py:77} INFO - Job 80: Subtask tweet_pipeline
+[2021-12-31 21:54:16,985] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 21:54:17,046] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 21:54:17,047] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,048] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,049] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,049] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:54:17,049] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 21:54:17,049] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 21:54:17,112] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T215416, end_date=20211231T215417
+[2021-12-31 21:54:17,170] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 21:54:17,230] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 21:59:25,258] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:59:25,292] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 21:59:25,292] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:59:25,293] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 21:59:25,293] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 21:59:25,312] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 21:59:25,321] {standard_task_runner.py:52} INFO - Started process 9714 to run task
+[2021-12-31 21:59:25,331] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpn3szawyt', '--error-file', '/tmp/tmpfpd4o2uh']
+[2021-12-31 21:59:25,332] {standard_task_runner.py:77} INFO - Job 93: Subtask tweet_pipeline
+[2021-12-31 21:59:25,393] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 21:59:25,578] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 21:59:25,584] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,591] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,594] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,594] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,595] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 21:59:25,596] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 21:59:25,596] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 21:59:25,684] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T215925, end_date=20211231T215925
+[2021-12-31 21:59:25,769] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 21:59:25,865] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 22:02:18,416] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:02:18,469] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:02:18,469] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:02:18,470] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 22:02:18,470] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:02:18,504] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 22:02:18,519] {standard_task_runner.py:52} INFO - Started process 9870 to run task
+[2021-12-31 22:02:18,534] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmp7eqco617', '--error-file', '/tmp/tmpxl0buovx']
+[2021-12-31 22:02:18,535] {standard_task_runner.py:77} INFO - Job 105: Subtask tweet_pipeline
+[2021-12-31 22:02:18,664] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 22:02:18,781] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 22:02:18,783] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,784] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,785] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,785] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,785] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,786] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:02:18,787] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 22:02:18,787] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 22:02:18,914] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T220218, end_date=20211231T220218
+[2021-12-31 22:02:18,985] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 22:02:19,095] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 22:03:23,251] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:03:23,295] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:03:23,295] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:03:23,296] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 22:03:23,296] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:03:23,331] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 22:03:23,346] {standard_task_runner.py:52} INFO - Started process 9954 to run task
+[2021-12-31 22:03:23,358] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpuqq7huso', '--error-file', '/tmp/tmp4r0ap3op']
+[2021-12-31 22:03:23,360] {standard_task_runner.py:77} INFO - Job 117: Subtask tweet_pipeline
+[2021-12-31 22:03:23,499] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 22:03:23,622] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 22:03:23,624] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,624] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,625] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,625] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,625] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,625] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:03:23,626] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 22:03:23,627] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 22:03:23,675] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T220323, end_date=20211231T220323
+[2021-12-31 22:03:23,741] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 22:03:23,881] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 22:12:57,029] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:12:57,045] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:12:57,045] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:12:57,045] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 22:12:57,045] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:12:57,064] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 22:12:57,070] {standard_task_runner.py:52} INFO - Started process 10404 to run task
+[2021-12-31 22:12:57,087] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpdy2int_j', '--error-file', '/tmp/tmpsnnuz6c9']
+[2021-12-31 22:12:57,089] {standard_task_runner.py:77} INFO - Job 129: Subtask tweet_pipeline
+[2021-12-31 22:12:57,162] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 22:12:57,240] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,242] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:12:57,243] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 22:12:57,243] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 22:12:57,275] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T221257, end_date=20211231T221257
+[2021-12-31 22:12:57,337] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 22:12:57,430] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 22:16:28,473] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:16:28,488] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:16:28,488] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:16:28,488] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 22:16:28,488] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:16:28,505] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 22:16:28,511] {standard_task_runner.py:52} INFO - Started process 10602 to run task
+[2021-12-31 22:16:28,518] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpg3ag8hq_', '--error-file', '/tmp/tmp7c6kdzqq']
+[2021-12-31 22:16:28,519] {standard_task_runner.py:77} INFO - Job 141: Subtask tweet_pipeline
+[2021-12-31 22:16:28,591] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 22:16:28,683] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,685] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:16:28,686] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 22:16:28,686] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 22:16:28,722] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T221628, end_date=20211231T221628
+[2021-12-31 22:16:28,772] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 22:16:28,843] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 22:18:35,290] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:18:35,309] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 22:18:35,309] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:18:35,309] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 22:18:35,309] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 22:18:35,329] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 22:18:35,337] {standard_task_runner.py:52} INFO - Started process 10729 to run task
+[2021-12-31 22:18:35,350] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpaontyd7l', '--error-file', '/tmp/tmpo3quwsw4']
+[2021-12-31 22:18:35,353] {standard_task_runner.py:77} INFO - Job 153: Subtask tweet_pipeline
+[2021-12-31 22:18:35,470] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 22:18:35,592] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 22:18:35,593] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,594] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,594] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,596] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,597] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,597] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,598] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,598] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,598] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,598] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,599] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,599] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 22:18:35,599] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 22:18:35,599] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 22:18:35,831] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T221835, end_date=20211231T221835
+[2021-12-31 22:18:35,932] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 22:18:36,023] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 23:25:24,734] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:25:24,753] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:25:24,753] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:25:24,753] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 23:25:24,753] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:25:24,789] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 23:25:24,810] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmpkzqnljw9', '--error-file', '/tmp/tmp_247t4eq']
+[2021-12-31 23:25:24,811] {standard_task_runner.py:77} INFO - Job 167: Subtask tweet_pipeline
+[2021-12-31 23:25:24,799] {standard_task_runner.py:52} INFO - Started process 1233 to run task
+[2021-12-31 23:25:24,933] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 23:25:25,056] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 23:25:25,058] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,059] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,060] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,061] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,062] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,062] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,062] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,062] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,062] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,063] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,063] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,063] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:25:25,063] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 23:25:25,063] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 23:25:25,080] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T232524, end_date=20211231T232525
+[2021-12-31 23:25:25,133] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 23:25:25,199] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 23:26:56,188] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:26:56,206] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:26:56,206] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:26:56,207] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 23:26:56,207] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:26:56,230] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 23:26:56,238] {standard_task_runner.py:52} INFO - Started process 1334 to run task
+[2021-12-31 23:26:56,247] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmp24su2czl', '--error-file', '/tmp/tmp5td4y_xz']
+[2021-12-31 23:26:56,250] {standard_task_runner.py:77} INFO - Job 179: Subtask tweet_pipeline
+[2021-12-31 23:26:56,344] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 23:26:56,409] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 23:26:56,410] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,410] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,410] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:26:56,411] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 23:26:56,412] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 23:26:56,485] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T232656, end_date=20211231T232656
+[2021-12-31 23:26:56,540] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 23:26:56,600] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 23:35:14,117] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:35:14,137] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [queued]>
+[2021-12-31 23:35:14,138] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:35:14,138] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 23:35:14,138] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 23:35:14,171] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): tweet_pipeline> on 2021-12-31 03:00:00+00:00
+[2021-12-31 23:35:14,183] {standard_task_runner.py:52} INFO - Started process 1744 to run task
+[2021-12-31 23:35:14,193] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'load_dimensions', 'tweet_pipeline', 'scheduled__2021-12-31T03:00:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/load_redshift.py', '--cfg-path', '/tmp/tmp2zzvk_ex', '--error-file', '/tmp/tmpcykoxfb8']
+[2021-12-31 23:35:14,196] {standard_task_runner.py:77} INFO - Job 191: Subtask tweet_pipeline
+[2021-12-31 23:35:14,337] {logging_mixin.py:109} INFO - Running <TaskInstance: load_dimensions.tweet_pipeline scheduled__2021-12-31T03:00:00+00:00 [running]> on host 87b5e846a243
+[2021-12-31 23:35:14,490] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=test_owner
+AIRFLOW_CTX_DAG_ID=load_dimensions
+AIRFLOW_CTX_TASK_ID=tweet_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T03:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T03:00:00+00:00
+[2021-12-31 23:35:14,495] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,495] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,495] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,495] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,496] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,497] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,497] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2021-12-31 23:35:14,497] {logging_mixin.py:109} INFO - Loading dimensions
+[2021-12-31 23:35:14,497] {python.py:175} INFO - Done. Returned value was: None
+[2021-12-31 23:35:14,696] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_dimensions, task_id=tweet_pipeline, execution_date=20211231T030000, start_date=20211231T233514, end_date=20211231T233514
+[2021-12-31 23:35:14,846] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 23:35:14,984] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

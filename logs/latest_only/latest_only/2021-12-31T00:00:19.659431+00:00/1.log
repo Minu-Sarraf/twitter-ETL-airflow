@@ -1,0 +1,27 @@
+[2021-12-31 04:00:23,047] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: latest_only.latest_only scheduled__2021-12-31T00:00:19.659431+00:00 [queued]>
+[2021-12-31 04:00:23,058] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: latest_only.latest_only scheduled__2021-12-31T00:00:19.659431+00:00 [queued]>
+[2021-12-31 04:00:23,058] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 04:00:23,058] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2021-12-31 04:00:23,058] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-31 04:00:23,071] {taskinstance.py:1259} INFO - Executing <Task(LatestOnlyOperator): latest_only> on 2021-12-31 00:00:19.659431+00:00
+[2021-12-31 04:00:23,074] {standard_task_runner.py:52} INFO - Started process 11496 to run task
+[2021-12-31 04:00:23,077] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'latest_only', 'latest_only', 'scheduled__2021-12-31T00:00:19.659431+00:00', '--job-id', '30', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_latest_only.py', '--cfg-path', '/tmp/tmpeohksuxr', '--error-file', '/tmp/tmpzp8h50yz']
+[2021-12-31 04:00:23,077] {standard_task_runner.py:77} INFO - Job 30: Subtask latest_only
+[2021-12-31 04:00:23,120] {logging_mixin.py:109} INFO - Running <TaskInstance: latest_only.latest_only scheduled__2021-12-31T00:00:19.659431+00:00 [running]> on host e3c2287c3ee3
+[2021-12-31 04:00:23,189] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=latest_only
+AIRFLOW_CTX_TASK_ID=latest_only
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T00:00:19.659431+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T00:00:19.659431+00:00
+[2021-12-31 04:00:23,190] {latest_only.py:67} INFO - Checking latest only with left_window: 2021-12-31T04:00:19.659431+00:00 right_window: 2021-12-31T08:00:19.659431+00:00 now: 2021-12-31T04:00:23.190485+00:00
+[2021-12-31 04:00:23,190] {latest_only.py:76} INFO - Latest, allowing execution to proceed.
+[2021-12-31 04:00:23,190] {skipmixin.py:143} INFO - Following branch ['task1']
+[2021-12-31 04:00:23,191] {skipmixin.py:174} INFO - Skipping tasks []
+[2021-12-31 04:00:23,243] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=latest_only, task_id=latest_only, execution_date=20211231T000019, start_date=20211231T040023, end_date=20211231T040023
+[2021-12-31 04:00:23,291] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-31 04:00:23,339] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-31 04:00:23,362] {dagrun.py:545} INFO - Marking run <DagRun latest_only @ 2021-12-31 00:00:19.659431+00:00: scheduled__2021-12-31T00:00:19.659431+00:00, externally triggered: False> successful
+[2021-12-31 04:00:23,363] {dagrun.py:605} INFO - DagRun Finished: dag_id=latest_only, execution_date=2021-12-31 00:00:19.659431+00:00, run_id=scheduled__2021-12-31T00:00:19.659431+00:00, run_start_date=2021-12-31 04:00:22.352648+00:00, run_end_date=2021-12-31 04:00:23.363054+00:00, run_duration=1.010406, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2021-12-31 00:00:19.659431+00:00, data_interval_end=2021-12-31 04:00:19.659431+00:00, dag_hash=a56b458a1dc5331887eb568924216f4e
