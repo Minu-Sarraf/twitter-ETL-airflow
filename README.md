@@ -12,4 +12,4 @@
 ### 2. Architecture:
      Project uses following components:
      
-![twitter (2)](https://user-images.githubusercontent.com/16570874/148721358-6156dc4a-c7d5-4214-8738-cfdebe7db03b.png)
+![twitter drawio](https://user-images.githubusercontent.com/16570874/148721784-850b7ab7-93e2-464f-aaa8-741561fb950a.png)
