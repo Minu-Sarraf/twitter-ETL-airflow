@@ -1,6 +1,10 @@
 # Twitter-ETL-airflow
 ## Installation
-   Run "docker-compose up" in your terminal to run airflow
+   In terminal, run:
+   1. echo -e "AIRFLOW_UID=$(id -u)" > .env
+   2. 'docker-compose up airflow-init'
+   3. "docker-compose up" 
+   
    
 ## Table of Contents
 1. Objective
@@ -64,6 +68,9 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
           Then use Redshift connection id in your python code to connect python code to Redshift and send the csv file into Redshift in sql format.
           
   #### d. Airflow:
-          Whole ETL pipeline was carried out in Airflow using docker.
+          Put bearer-token, that you got from Twitter API under airflow->Admin->Variables
+          Add connection of airflow to Redshift from airflow -> Admin -> Connections
+          User https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/connections/redshift.html for more details.
+          
           
 
