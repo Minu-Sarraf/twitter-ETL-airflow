@@ -69,8 +69,21 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
           
   #### d. Airflow:
           Put bearer-token, that you got from Twitter API under airflow->Admin->Variables
+          
           Add connection of airflow to Redshift from airflow -> Admin -> Connections
+          
           User https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/connections/redshift.html for more details.
+          
+          On success, Dagger graph should look like this:
+          
+          ![Screenshot from 2022-01-15 01-42-19](https://user-images.githubusercontent.com/16570874/149612222-829c343e-17cf-45e8-b427-5cb683aec961.png)
+          
+          Tree should look like this:
+          
+          ![Screenshot from 2022-01-15 01-42-25](https://user-images.githubusercontent.com/16570874/149612226-c54dd1c6-b8f5-4427-86b8-205a5e14ff8a.png)
+
+          
+          
           
           
 
