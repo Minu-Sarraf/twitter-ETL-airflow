@@ -71,7 +71,7 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
  (
       author_id        varchar(80),
       created_at       timestamptz,
-      id     		   varchar(80),
+      id     		     varchar(80),
       original_text    char(1000),
       location	        varchar(100)
  ) ;
