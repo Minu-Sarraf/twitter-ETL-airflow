@@ -1,10 +1,12 @@
-# Twitter-ETL-airflow
+# Twitter ETL Airflow
 ## Installation
    Clone this repo and go the directory in the terminal where you have project repo.
    In terminal, run:
-   1. echo -e "AIRFLOW_UID=$(id -u)" > .env
-   2. 'docker-compose up airflow-init'
-   3. "docker-compose up" 
+   ```bash
+   $ echo -e "AIRFLOW_UID=$(id -u)" > .env
+   $ docker-compose up airflow-init
+   $ docker-compose up 
+   ```
    
    
 ## Table of Contents
@@ -35,10 +37,11 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
  to signup twitter api developer account.
  These credentials for Twitter API is kept inside airflow variables which can be fetched as below:
 
+  ```
   BEARER_TOKEN=Variable.get("twitter-bearer-token")
-
+  ```
   Twitter API:
-  
+  ```python
   search_url="https://api.twitter.com/2/tweets/search/recent"
   
   query="covid"
@@ -58,6 +61,7 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
   url = "{}?query={}&{}&{}&expansions=author_id,referenced_tweets.id&max_results=10&start_time={}&end_time={}".format(
                  search_url, query, tweet_fields, user_fields, start_time, end_time
              )
+  ```
 
   The extracted response is in the form of Json file which is stored in local computer.
 
@@ -67,16 +71,18 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
   #### b. Load:
  In order to load data into AWS Redshift, first we need to create AWS developer account. Click [here] (https://docs.aws.amazon.com/ses/latest/dg/setting-up.html) to create an account.
  In Redshift Create a database tweet and use below query to create the table:
+ ```sql
  
-             CREATE TABLE tweet
-             (
-              author_id        varchar(80),
-              created_at       timestamptz,
-              id     		   varchar(80),
-              original_text    char(1000),
-              location	        varchar(100)
-              ) ;
+ CREATE TABLE tweet
+ (
+      author_id        varchar(80),
+      created_at       timestamptz,
+      id     		   varchar(80),
+      original_text    char(1000),
+      location	        varchar(100)
+ ) ;
               
+  ```
   Then use Redshift connection id in your python code to connect python code to Redshift and send the csv file into Redshift in sql format.
           
   #### d. Airflow:
@@ -94,8 +100,15 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
 
 ![Screenshot from 2022-01-15 01-42-25](https://user-images.githubusercontent.com/16570874/149612226-c54dd1c6-b8f5-4427-86b8-205a5e14ff8a.png)
 
-          
-          
+
+## Authors
+
+* [Minu sarraf](mailto:minusarraf96@gmail.com)
+
+
+## License
+
+This source code is released under the [MIT License](LICENSE)          
           
           
 
