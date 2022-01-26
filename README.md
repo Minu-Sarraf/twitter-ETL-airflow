@@ -1,4 +1,6 @@
 # Twitter ETL Airflow
+> Description
+
 ## Installation
    Clone this repo and go the directory in the terminal where you have project repo.
    In terminal, run:
@@ -14,10 +16,10 @@
 2. Architecture
 3. Modules
 
-### Objective
+## Objective
 Extract the data from the twitter api, clean and transform it in the format that can be used for analysis and then load it to the AWS Redshift warehouse using airflow scheduler.
 
-### Architecture
+## Architecture
 Project uses following components:
      
 ![twitter drawio](https://user-images.githubusercontent.com/16570874/148721784-850b7ab7-93e2-464f-aaa8-741561fb950a.png)
@@ -30,8 +32,8 @@ Lastly, stored csv file is loaded into AWS Redshift for further analysis.
 
 Airflow is used here as a job scheduler to extract, transform and load the data.
 
-### Modules
-#### a. Extract: 
+## Modules
+### a. Extract: 
  Twitter API is used to fetch the data. In order to get the access of Twitter API, we need to get the credentials.
  Please click [here](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) 
  to signup twitter api developer account.
@@ -57,10 +59,10 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
 
   The extracted response is in the form of Json file which is stored in local computer.
 
-  #### b. Transform:
+  ### b. Transform:
  The extracted JSON file is cleaned and converted into dataframe for further exploratory analysis and only data with 5 columns                                     [author_id,created_at,id,original_text,location] were converted to csv file and is saved to local computer.
 
-  #### b. Load:
+  ### b. Load:
  In order to load data into AWS Redshift, first we need to create AWS developer account. Click [here] (https://docs.aws.amazon.com/ses/latest/dg/setting-up.html) to create an account.
  In Redshift Create a database tweet and use below query to create the table:
  ```sql
@@ -76,7 +78,7 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
   ```
   Then use Redshift connection id in your python code to connect python code to Redshift and send the csv file into Redshift in sql format.
           
-  #### d. Airflow:
+  ### d. Airflow:
  Put bearer-token, that you got from Twitter API under airflow->Admin->Variables
 
  Add connection of airflow to Redshift from airflow -> Admin -> Connections
