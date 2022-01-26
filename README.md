@@ -43,21 +43,13 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
   Twitter API:
   ```python
   search_url="https://api.twitter.com/2/tweets/search/recent"
-  
-  query="covid"
-  
+  query="covid"  
   tweet_fields = "tweet.fields=text,created_at,referenced_tweets"
-  
   user_fields = "user.fields=username,name,verified,location"
-  
   start = datetime.datetime.strptime(ts, '%Y-%m-%dT%H:%M:%S%z')
-  
   end = start + datetime.timedelta(hours=1)
-  
   start_time = start.strftime('%Y-%m-%dT%H:%M:%SZ')
-  
   end_time = end.strftime('%Y-%m-%dT%H:%M:%SZ')
-  
   url = "{}?query={}&{}&{}&expansions=author_id,referenced_tweets.id&max_results=10&start_time={}&end_time={}".format(
                  search_url, query, tweet_fields, user_fields, start_time, end_time
              )
@@ -103,7 +95,7 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
 
 ## Authors
 
-* [Minu sarraf](mailto:minusarraf96@gmail.com)
+* [Minu Sarraf](mailto:minusarraf96@gmail.com)
 
 
 ## License
