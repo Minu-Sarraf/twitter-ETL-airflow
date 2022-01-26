@@ -51,8 +51,8 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
   start_time = start.strftime('%Y-%m-%dT%H:%M:%SZ')
   end_time = end.strftime('%Y-%m-%dT%H:%M:%SZ')
   url = "{}?query={}&{}&{}&expansions=author_id,referenced_tweets.id&max_results=10&start_time={}&end_time={}".format(
-                 search_url, query, tweet_fields, user_fields, start_time, end_time
-             )
+      search_url, query, tweet_fields, user_fields, start_time, end_time
+  )
   ```
 
   The extracted response is in the form of Json file which is stored in local computer.
