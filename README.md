@@ -73,7 +73,6 @@ Airflow is used here as a job scheduler to extract, transform and load the data.
       original_text    char(1000),
       location	        varchar(100)
  ) ;
-              
   ```
   Then use Redshift connection id in your python code to connect python code to Redshift and send the csv file into Redshift in sql format.
           
